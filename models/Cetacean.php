@@ -2,10 +2,10 @@
 
 namespace app\models;
 
-class Cephalopod implements Mammal
+class Cetacean implements Mammal
 {
     public function move ()
     {
-        return "Cephalopods swim.";
+        return "Cetaceans swim.";
     }
 }

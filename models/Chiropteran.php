@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-class Bat implements Mammal
+class Chiropteran implements Mammal
 {
     public function move ()
     {
