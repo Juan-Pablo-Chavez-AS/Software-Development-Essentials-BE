@@ -17,4 +17,9 @@ abstract class Chiropteran implements MammalThatDrinksWater
     {
         return "This Chiropteran drinks water";
     }
+
+    public function getSpecie(): string
+    {
+        return "Chiropteran";
+    }
 }

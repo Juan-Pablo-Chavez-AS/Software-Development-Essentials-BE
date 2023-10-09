@@ -8,4 +8,9 @@ abstract class Cetacean implements Mammal
     {
         return "Cetaceans swim.";
     }
+
+    public function getSpecie(): string
+    {
+        return "Cetacean";
+    }
 }

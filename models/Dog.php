@@ -4,8 +4,11 @@ namespace app\models;
 
 class Dog extends Canine
 {
-    public function __construct()
-    {
 
+    private string $breed;
+
+    public function __construct($breed)
+    {
+        $this->breed = $breed;
     }
 }

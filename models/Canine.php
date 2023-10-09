@@ -17,4 +17,9 @@ abstract class Canine implements MammalThatDrinksWater
     {
         return "This canine drinks water";
     }
+
+    public function getSpecie(): string
+    {
+        return "Canine";
+    }
 }
