@@ -4,5 +4,5 @@ namespace app\models;
 
 interface Mammal
 {
-    public function move();
+    public function move(): string;
 }

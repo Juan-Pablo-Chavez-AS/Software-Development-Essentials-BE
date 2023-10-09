@@ -4,7 +4,7 @@ namespace app\models;
 
 class Cetacean implements Mammal
 {
-    public function move ()
+    public function move (): string
     {
         return "Cetaceans swim.";
     }
