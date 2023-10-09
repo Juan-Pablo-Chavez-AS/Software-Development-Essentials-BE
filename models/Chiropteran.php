@@ -6,7 +6,7 @@ namespace app\models;
  * mammals anymore and MammalThatDrinksWater extends Mammal
  * Therefore Quiropterans are still a mammal(Liskov)
  */
-class Chiropteran implements MammalThatDrinksWater
+abstract class Chiropteran implements MammalThatDrinksWater
 {
     public function move(): string
     {

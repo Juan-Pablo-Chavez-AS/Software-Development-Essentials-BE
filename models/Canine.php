@@ -6,7 +6,7 @@ namespace app\models;
  * mammals anymore and MammalThatDrinksWater extends Mammal
  * Therefore Canines are still a mammal(Liskov)
  */
-class Canine implements MammalThatDrinksWater
+abstract class Canine implements MammalThatDrinksWater
 {
     public function move(): string
     {
