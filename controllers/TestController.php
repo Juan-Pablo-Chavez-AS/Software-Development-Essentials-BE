@@ -14,11 +14,17 @@ class TestController extends Controller
         return parent::beforeAction($action);
     }
 
+    /**
+     * Depends on an abstraction rather than checking types to act accordingly,
+     * therefore Open-Closed is in play too.
+     */
     public function actionRandomMammalMove()
     {
         $randomMammal = RandomMammalGenerator::generate();
+        $specie = $randomMammal->getSpecie();
+        $move = $randomMammal->move();
         return [
-            $randomMammal->getSpecie() => $randomMammal->move(),
+            $specie => $move,
         ];
     }
 
