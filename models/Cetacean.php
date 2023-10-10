@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-abstract class Cetacean implements Mammal
+class Cetacean implements Mammal
 {
     public function move (): string
     {

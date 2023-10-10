@@ -6,8 +6,17 @@ namespace app\models;
  * mammals anymore and MammalThatDrinksWater extends Mammal
  * Therefore Canines are still a mammal(Liskov)
  */
-abstract class Canine implements MammalThatDrinksWater
+class Canine implements MammalThatDrinksWater
 {
+    private string $breed;
+    private string $name;
+
+    public function __construct($breed, $name)
+    {
+        $this->breed = $breed;
+        $this->name = $name;
+    }
+
     public function move(): string
     {
         return "Canines walk.";

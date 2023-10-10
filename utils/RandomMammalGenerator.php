@@ -2,10 +2,10 @@
 
 namespace app\utils;
 
-use app\models\Bat;
-use app\models\Dog;
+use app\models\Chiropteran;
+use app\models\Canine;
 use app\models\Mammal;
-use app\models\Whale;
+use app\models\Cetacean;
 use Exception;
 /**
  * Single responsability class
@@ -21,13 +21,13 @@ class RandomMammalGenerator
         $mammalType = rand(0, 2);
         switch ($mammalType) {
             case 0:
-                $mammal = new Dog("Siberian Husky");
+                $mammal = new Canine("Siberian Husky", "");
                 break;
             case 1:
-                $mammal = new Whale();
+                $mammal = new Cetacean();
                 break;
             case 2:
-                $mammal = new Bat();
+                $mammal = new Chiropteran();
                 break;
             default:
                 throw new Exception("Rand() failed");
