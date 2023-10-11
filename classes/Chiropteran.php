@@ -1,13 +1,18 @@
 <?php
 
-namespace app\models;
 /**
  * Quiropterans are mammals that drink water, but that doesn't mean they aren't
  * mammals anymore and MammalThatDrinksWater extends Mammal
  * Therefore Quiropterans are still a mammal(Liskov)
  */
-class Chiropteran implements MammalThatDrinksWater
+class Chiropteran extends MammalThatDrinksWater
 {
+
+    public function __construct($breed, $name)
+    {
+        parent::__construct($breed, $name);
+    }
+
     public function move(): string
     {
         return "Bats are the only mammal that flies.";

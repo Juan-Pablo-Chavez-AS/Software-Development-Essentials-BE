@@ -1,9 +1,13 @@
 <?php
 
-namespace app\models;
-
-class Cetacean implements Mammal
+class Cetacean extends Mammal
 {
+
+    public function __construct($breed, $name)
+    {
+        parent::__construct($breed, $name);
+    }
+
     public function move (): string
     {
         return "Cetaceans swim.";
