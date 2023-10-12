@@ -21,4 +21,9 @@ abstract class ZooAnimal
         return $this->foodInfo;
     }
 
+    public function getAllInfo(): string
+    {
+        $foodInfo = $this->foodInfo->getFoodInfo();
+        return "Name: $this->name.\nBreed: $this->breed\nFood: $foodInfo";
+    }
 }
