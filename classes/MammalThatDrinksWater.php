@@ -8,9 +8,9 @@ abstract class MammalThatDrinksWater extends Mammal
 {
     abstract function drinkWater(): string;
 
-    protected function __construct($breed, $name)
+    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null)
     {
-        parent::__construct($breed, $name);
+        parent::__construct($breed, $name, $foodInfo);
     }
 
 }

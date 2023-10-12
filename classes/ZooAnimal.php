@@ -4,10 +4,21 @@ abstract class ZooAnimal
 {
     protected string $breed;
     protected string $name;
+    protected FoodInfo $foodInfo;
 
-    public function __construct($breed, $name)
+    abstract function move(): string;
+    abstract function getSpecie(): string;
+
+    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null)
     {
         $this->breed = $breed;
         $this->name = $name;
+        $this->foodInfo = $foodInfo;
     }
+
+    public function getFoodInfo(): FoodInfo
+    {
+        return $this->foodInfo;
+    }
+
 }
