@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * WIP: Necessity check pending
+ */
 class FoodInfo
 {
 
