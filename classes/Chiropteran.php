@@ -10,9 +10,9 @@ include "MammalThatDrinksWater.php";
 class Chiropteran extends MammalThatDrinksWater
 {
 
-    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null)
+    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null, array $extraInfo=[])
     {
-        parent::__construct($breed, $name, $foodInfo);
+        parent::__construct($breed, $name, $foodInfo, $extraInfo);
     }
 
     public function move(): string

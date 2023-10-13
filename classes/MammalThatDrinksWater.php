@@ -8,11 +8,11 @@ include "Mammal.php";
  */
 abstract class MammalThatDrinksWater extends Mammal
 {
-    abstract function drinkWater(): string;
 
-    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null)
+    public function __construct(string $breed, string $name, FoodInfo $foodInfo=null, array $extraInfo=[])
     {
-        parent::__construct($breed, $name, $foodInfo);
+        parent::__construct($breed, $name, $foodInfo, $extraInfo);
     }
 
+    abstract function drinkWater(): string;
 }
