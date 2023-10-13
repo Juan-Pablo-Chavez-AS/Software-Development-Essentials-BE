@@ -1,9 +1,18 @@
 <?php
     include "classes/FoodInfo.php";
     include "classes/Canine.php";
-    $dogFoodInfo = new FoodInfo("Carnivoro");
-    $dog1 = new Canine("Husky", "gepeto", $dogFoodInfo);
-    $dog2 = new Canine("Puddle", "Nubecita", $dogFoodInfo);
+
+    $dogFoodInfo = new FoodInfo("Carnivore");
+
+    $dog1ExtraInfo = [
+        "Found" => "He was lost in a woodshop",
+    ];
+    $dog1ExtraInfo = [
+        "Found" => "He was lost in a woodshop",
+    ];
+
+    $dog1 = new Canine("Husky", "Pinocchio", $dogFoodInfo, $dog1ExtraInfo);
+    $dog2 = new Canine("Puddle", "Cloudy", $dogFoodInfo);
     $dog3 = new Canine("Golden Retriever", "Boss", $dogFoodInfo);
 
     $dogs = [
