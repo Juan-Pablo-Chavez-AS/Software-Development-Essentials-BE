@@ -1,5 +1,7 @@
 <?php
 
+include "ZooAnimal.php";
+
 abstract class Mammal extends ZooAnimal
 {
 

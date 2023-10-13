@@ -1,5 +1,7 @@
 <?php
 
+include "MammalThatDrinksWater.php";
+
 /**
  * Canines are mammals that drink water, but that doesn't mean they aren't
  * mammals anymore and MammalThatDrinksWater extends Mammal

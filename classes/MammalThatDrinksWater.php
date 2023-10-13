@@ -1,5 +1,7 @@
 <?php
 
+include "Mammal.php";
+
 /**
  * Since not all mammals drink water the drinkWater function was
  * segregated into a new interface
