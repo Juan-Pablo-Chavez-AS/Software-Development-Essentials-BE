@@ -38,12 +38,11 @@ class ZooHabitat
         array_push($this->animals, ...$filteredAnimals);
     }
 
-    public function habitatAnimalsInfo(): string
+    public function habitatInfo(): string
     {
         $habitatInfo = "<h4>$this->name</h4><h3>$this->animalClassification" . "s</h3>";
         array_walk_recursive($this->animals, function ($animal) use (&$habitatInfo) {
-            $habitatInfo .= "<hr/>";
-            $habitatInfo .= $animal->getAllInfo();
+            $habitatInfo .= "<hr/>{$animal->getAllInfo()}";
         });
         return $habitatInfo;
     }
