@@ -40,8 +40,11 @@ class ZooHabitat
 
     public function habitatAnimalsInfo(): string
     {
-        $habitatInfo = "<h4>$this->name</h4>";
-        // WIP: Think of a string output format for this class, something for the dom
+        $habitatInfo = "<h4>$this->name</h4><h3>$this->animalClassification" . "s</h3>";
+        array_walk_recursive($this->animals, function ($animal) use (&$habitatInfo) {
+            $habitatInfo .= "<hr/>";
+            $habitatInfo .= $animal->getAllInfo();
+        });
         return $habitatInfo;
     }
 }
