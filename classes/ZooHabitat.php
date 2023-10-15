@@ -44,6 +44,7 @@ class ZooHabitat
         array_walk_recursive($this->animals, function ($animal) use (&$habitatInfo) {
             $habitatInfo .= "<hr/>{$animal->getAllInfo()}";
         });
+        $habitatInfo .= "<hr/>";
         return $habitatInfo;
     }
 }
