@@ -3,7 +3,6 @@
     include_once "classes/Canine.php";
     include_once "classes/Cetacean.php";
     include_once "classes/ZooHabitat.php";
-    include_once "tests/CanineTest.php";
 
     $dogFoodInfo = new FoodInfo("Carnivore");
 
@@ -42,9 +41,4 @@
     $caninesHabitat->addAnimals($dogs);
 
     echo $caninesHabitat->habitatInfo();
-
-    $canineTest = new CanineTest();
-    $canineTest->testMove();
-    echo "<br/>";
-    $canineTest->testMoveWithoutFood();
 ?>

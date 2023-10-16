@@ -2,7 +2,9 @@
     include_once "./classes/Canine.php";
     include_once "./classes/FoodInfo.php";
 
-    class CanineTest
+    use PHPUnit\Framework\TestCase;
+
+    class CanineTest extends TestCase
     {
 
         public function testMove()
@@ -12,7 +14,7 @@
             $result = $canine->move();
             $expectedResult = "walk";
 
-            echo $result == $expectedResult ? "True" : "False";
+            $this->assertEquals($expectedResult, $result);
         }
 
         public function testMoveWithoutFood()
@@ -20,7 +22,7 @@
             $canine = new Canine("Husky", "Pedrito");
             $result = $canine->move();
             $expectedResult = "sleep";
-            echo $result == $expectedResult ? "True" : "False";
+            $this->assertEquals($expectedResult, $result);
         }
     }
 ?>
