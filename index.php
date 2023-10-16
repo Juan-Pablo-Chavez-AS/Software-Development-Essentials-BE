@@ -31,6 +31,11 @@
         echo "<hr>";
     });
     $dogs = array_reverse($dogs);
+
+    $notADog = new Cetacean("Whale", "Albert");
+    echo $notADog->getAllInfo();
+    $dogs[] = $notADog;
+
     $caninesHabitat = new ZooHabitat(Canine::class, "The Dog House");
     $caninesHabitat->addAnimals([]);
     $caninesHabitat->addAnimals($dogs);
