@@ -20,6 +20,11 @@ abstract class ZooAnimal
         return $this->foodInfo;
     }
 
+    public function setFoodInfo(?FoodInfo $foodInfo): void
+    {
+        $this->foodInfo = $foodInfo;
+    }
+
     public function getName(): string
     {
         return $this->name;
