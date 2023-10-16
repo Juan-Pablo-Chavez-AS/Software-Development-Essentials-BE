@@ -7,21 +7,44 @@
     class CanineTest extends TestCase
     {
 
-        public function testMove()
+        private Canine $testCanine;
+
+        public function setUp(): void
         {
             $foodInfo = new FoodInfo("Carnivore");
-            $canine = new Canine("Husky", "Pedrito", $foodInfo);
-            $result = $canine->move();
+            $this->testCanine = new Canine("Husky", "Pedrito", $foodInfo);
+        }
+
+        public function testMove(): void
+        {
+            $result = $this->testCanine->move();
             $expectedResult = "walk";
 
             $this->assertEquals($expectedResult, $result);
         }
 
-        public function testMoveWithoutFood()
+        public function testMoveWithoutFood(): void
         {
-            $canine = new Canine("Husky", "Pedrito");
-            $result = $canine->move();
+            $this->testCanine->setFoodInfo(null);
+            $result = $this->testCanine->move();
             $expectedResult = "sleep";
+
+            $this->assertEquals($expectedResult, $result);
+        }
+
+        public function testDrinkWater()
+        {
+            $result = $this->testCanine->drinkWater();
+            $expectedResult = "This canine drinks water";
+
+            $this->assertEquals($expectedResult, $result);
+        }
+
+        public function testGetSpecie()
+        {
+            $result = $this->testCanine->getSpecie();
+            $expectedResult = "Canine";
+
             $this->assertEquals($expectedResult, $result);
         }
     }
