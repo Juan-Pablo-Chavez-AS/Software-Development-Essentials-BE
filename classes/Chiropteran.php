@@ -1,6 +1,6 @@
 <?php
 
-include "MammalThatDrinksWater.php";
+include_once "MammalThatDrinksWater.php";
 
 /**
  * Quiropterans are mammals that drink water, but that doesn't mean they aren't

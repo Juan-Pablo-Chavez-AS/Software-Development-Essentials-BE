@@ -1,7 +1,8 @@
 <?php
-    include "classes/FoodInfo.php";
-    include "classes/Canine.php";
-    include "classes/ZooHabitat.php";
+    include_once "classes/FoodInfo.php";
+    include_once "classes/Canine.php";
+    include_once "classes/Cetacean.php";
+    include_once "classes/ZooHabitat.php";
 
     $dogFoodInfo = new FoodInfo("Carnivore");
 

@@ -1,6 +1,6 @@
 <?php
 
-include "ZooAnimal.php";
+include_once "ZooAnimal.php";
 
 abstract class Mammal extends ZooAnimal
 {

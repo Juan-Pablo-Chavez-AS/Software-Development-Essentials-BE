@@ -1,6 +1,6 @@
 <?php
 
-include "Mammal.php";
+include_once "Mammal.php";
 
 class Cetacean extends Mammal
 {

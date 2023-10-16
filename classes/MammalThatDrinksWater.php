@@ -1,6 +1,6 @@
 <?php
 
-include "Mammal.php";
+include_once "Mammal.php";
 
 /**
  * Since not all mammals drink water the drinkWater function was
