@@ -17,7 +17,7 @@ class Canine extends MammalThatDrinksWater
 
     public function move(): string
     {
-        return "Canines walk.";
+        return is_null($this->foodInfo) ? "sleep" : "walk";
     }
 
     public function drinkWater(): string
