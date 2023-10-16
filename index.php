@@ -1,6 +1,7 @@
 <?php
     include "classes/FoodInfo.php";
     include "classes/Canine.php";
+    include "classes/ZooHabitat.php";
 
     $dogFoodInfo = new FoodInfo("Carnivore");
 
@@ -28,4 +29,10 @@
         echo $dog->getAllInfo();
         echo "<hr>";
     });
+    $dogs = array_reverse($dogs);
+    $caninesHabitat = new ZooHabitat(Canine::class, "The Dog House");
+    $caninesHabitat->addAnimals([]);
+    $caninesHabitat->addAnimals($dogs);
+
+    echo $caninesHabitat->habitatInfo();
 ?>

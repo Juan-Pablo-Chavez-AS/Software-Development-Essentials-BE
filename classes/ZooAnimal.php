@@ -4,7 +4,7 @@ abstract class ZooAnimal
 {
     protected string $breed;
     protected string $name;
-    protected FoodInfo $foodInfo;
+    protected ?FoodInfo $foodInfo;
     protected array $extraInfo;
 
     public function __construct(string $breed, string $name, FoodInfo $foodInfo=null, array $extraInfo=[])
@@ -62,7 +62,11 @@ abstract class ZooAnimal
 
     public function getAllInfo(): string
     {
-        $foodInfo = $this->foodInfo->getFoodInfo();
+        if ($this->foodInfo) {
+            $foodInfo = $this->foodInfo->getFoodInfo();
+        } else {
+            $foodInfo = "Unkown";
+        }
         return "Name: $this->name.<br>Breed: $this->breed<br>Food: $foodInfo<br>" . $this->getExtraInfo();
     }
 
