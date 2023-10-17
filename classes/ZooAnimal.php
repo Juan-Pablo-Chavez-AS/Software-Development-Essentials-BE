@@ -65,6 +65,11 @@ abstract class ZooAnimal
         return $this->extraInfo;
     }
 
+    public function setExtraInfo(array $extraInfo): void
+    {
+        $this->extraInfo = $extraInfo;
+    }
+
     public function getAllInfo(): string
     {
         if ($this->foodInfo) {
