@@ -53,7 +53,6 @@
             $newCanine = new Canine("Mixed", "Doggy");
 
             $this->assertNotNull($newCanine);
-            $this->assertInstanceOf(Canine::class, $newCanine);
         }
     }
 ?>

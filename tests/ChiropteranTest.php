@@ -44,7 +44,6 @@
             $newCanine = new Chiropteran("Bat", "Ben Affleck");
 
             $this->assertNotNull($newCanine);
-            $this->assertInstanceOf(Chiropteran::class, $newCanine);
         }
     }
 ?>

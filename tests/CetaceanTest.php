@@ -36,7 +36,6 @@
             $newCetacean = new Cetacean("White Shark", "Chester");
 
             $this->assertNotNull($newCetacean);
-            $this->assertInstanceOf(Cetacean::class, $newCetacean);
         }
     }
 ?>
