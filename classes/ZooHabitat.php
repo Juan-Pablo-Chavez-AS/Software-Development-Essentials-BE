@@ -9,7 +9,7 @@ class ZooHabitat
     /**
      * @param string $classification Should be the value of ```::class``` from a concrete class that implements ```ZooAnimal```
      */
-    public function __construct(string $classification, $name)
+    public function __construct(string $classification, string $name)
     {
         $this->animals = array();
         $this->animalClassification = $classification;
